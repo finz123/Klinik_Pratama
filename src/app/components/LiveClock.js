@@ -41,7 +41,7 @@ const LiveClock = () => {
       flexDirection="column"
       alignItems="center"
     >
-      <Typography variant="h4" gutterBottom sx={{ fontSize: '48px' }}>
+      <Typography variant="h4" gutterBottom sx={{ fontSize: '48px', fontWeight:'bold'  }}>
         {formatTime(currentTime)}
       </Typography>
       <Typography variant="h6" color="textSecondary" sx={{ fontSize: '30px'}}>

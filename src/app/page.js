@@ -1,6 +1,6 @@
 'use client'; // Tambahkan ini di baris pertama
 
-import { Button, Grid, Typography, Box } from '@mui/material';
+import { Button, Grid2, Typography, Box } from '@mui/material';
 import Image from 'next/image'; 
 import Link from 'next/link'; // Import Link dari Next.js
 import logo_karyawan from './public/logo_karyawan.jpeg';
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <Box
         display="flex"
-        flexDirection="column"
+        flexDirection="column"  
         alignItems="center"
         justifyContent="center"
         minHeight="60vh"
@@ -24,8 +24,8 @@ export default function Home() {
           Mohon untuk memilih layanan
         </Typography>
 
-        <Grid container spacing={5} justifyContent="center">
-          <Grid item>
+        <Grid2 container spacing={5} justifyContent="center">
+          <Grid2 item>
             {/* Link untuk navigasi ke halaman karyawan */}
             <Link href="/karyawan" passHref>
               <Button
@@ -68,9 +68,9 @@ export default function Home() {
                 </Box>
               </Button>
             </Link>
-          </Grid>
+          </Grid2>
 
-          <Grid item>
+          <Grid2 item>
             {/* Link untuk navigasi ke halaman umum */}
             <Link href="/umum" passHref>
               <Button
@@ -111,8 +111,8 @@ export default function Home() {
                 </Box>
               </Button>
             </Link>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </Box>
       <Footer />
     </>

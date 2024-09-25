@@ -1,14 +1,14 @@
 'use client';
-import { Box, Grid, Typography, Button } from '@mui/material';
+import { Box, Grid2, Typography, Button } from '@mui/material';
 import Link from 'next/link'; // Import Link dari Next.js
 import Image from 'next/image'; // Impor komponen Image dari Next.js
 import BPJS from '../public/BPJS.png';
 import asuransi from '../public/asuransi.png';
-import Umum from '../public/Umum.png';
+import layanan_umum from '../public/layanan_umum.png';
 import Footer from '../components/footer';
 import Header from '../components/Header';
 
-export default function umum() {
+const Umum = () => {
   return (
     <>
       <Header />
@@ -20,20 +20,20 @@ export default function umum() {
         minHeight="60vh"
         p={2}
       >
-        <Typography variant="h4" marginBottom={10}>
+        <Typography variant="h3" marginBottom={10} justifyContent="center">
           Mohon untuk memilih layanan
         </Typography>
 
-        <Grid container spacing={5} justifyContent="center">
-          <Grid item>
+        <Grid2 container spacing={5} justifyContent="center">
+          <Grid2 item>
             {/* Link untuk navigasi ke halaman karyawan */}
-            <Link href="/poliklinik" passHref>
+            <Link href="/umum/poliumum" passHref>
               <Button
                 variant="contained"
                 color="primary"
                 sx={{
-                  width: 300,
-                  height: 200,
+                  width: 400,
+                  height: 400,
                   backgroundColor: 'white',
                   borderRadius: '10px',
                   boxShadow: `
@@ -47,24 +47,24 @@ export default function umum() {
                     <Image
                       src={BPJS}
                       alt="BPJS"
-                      width={180}
-                      height={180}
+                      width={300}
+                      height={300}
                     />
                   </div>
                 </Box>
               </Button>
             </Link>
-          </Grid>
+          </Grid2>
 
-          <Grid item>
+          <Grid2 item>
             {/* Link untuk navigasi ke halaman umum */}
-            <Link href="/poliklinik" passHref>
+            <Link href="/umum/poliumum" passHref>
               <Button
                 variant="contained"
                 color="primary"
                 sx={{
-                  width: 300,
-                  height: 200,
+                  width: 400,
+                  height: 400,
                   backgroundColor: 'white',
                   borderRadius: '10px',
                   boxShadow:`
@@ -77,12 +77,12 @@ export default function umum() {
                   <Image
                     src={asuransi}
                     alt="asuransi"
-                    width={100}
-                    height={50}
+                    width={200}
+                    height={150}
                   />
 
                   <Typography
-                    variant="h5"
+                    variant="h4"
                     sx={{
                       fontFamily: 'sans-serif',
                       fontWeight: '650',
@@ -97,17 +97,17 @@ export default function umum() {
                 </Box>
               </Button>
             </Link>
-          </Grid>
+          </Grid2>
 
-          <Grid item>
+          <Grid2 item>
             {/* Link untuk navigasi ke halaman karyawan */}
-            <Link href="/poliklinik" passHref>
+            <Link href="/umum/poliumum" passHref>
               <Button
                 variant="contained"
                 color="primary"
                 sx={{
-                  width: 300,
-                  height: 200,
+                  width: 400,
+                  height: 400,
                   backgroundColor: 'white',
                   borderRadius: '10px',
                   boxShadow: '0px 4px 20px rgba(43, 42, 41, 0.50)',
@@ -116,15 +116,15 @@ export default function umum() {
                 <Box display="flex" flexDirection="column" alignItems="center">
                   <div>
                     <Image
-                      src={Umum}
+                      src={layanan_umum}
                       alt="Layanan Umum"
-                      width={100}
-                      height={50}
+                      width={200}
+                      height={150}
                     />
                   </div>
 
                   <Typography
-                    variant="h5"
+                    variant="h4"
                     sx={{
                       fontFamily: 'sans-serif',
                       fontWeight: '650',
@@ -138,15 +138,15 @@ export default function umum() {
                 </Box>
               </Button>
             </Link>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
        {/* Tombol Kembali */}
        <Link href="/" passHref>
           <Button
             variant="outlined" // Gunakan variant outlined untuk border
             sx={{
-              width: 200,
-              height: 75,
+              width: 300,
+              height: 100,
               borderColor: 'red', // Border berwarna merah
               color: 'red', // Tulisan berwarna merah
               borderRadius: '10px', // Sudut border
@@ -155,7 +155,7 @@ export default function umum() {
                 borderColor: 'darkred', // Warna border saat hover
                 color: 'darkred', // Warna tulisan saat hover
               },
-              fontSize: '20px', // Ukuran font
+              fontSize: '40px', // Ukuran font
               fontWeight: 'bold', // Ketebalan font, // Ketebalan font
               fontFamily: 'sans-serif', // Jenis font
               textTransform: 'none', // Menghindari semua huruf kapital
@@ -169,3 +169,4 @@ export default function umum() {
     </>
   );
 }
+export default Umum;

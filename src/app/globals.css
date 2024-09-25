@@ -3,11 +3,11 @@
 @import "tailwindcss/utilities";
 /* styles/globals.css */
 
-*{
+/*{
   border: solid 1px red;
   border-color: red;
 }
-
+*/
 :root {
   --background: #ffffff;
   --foreground: #171717;

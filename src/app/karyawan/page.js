@@ -1,5 +1,5 @@
 'use client';
-import { Box, Grid22, Typography, Button } from '@mui/material';
+import { Box, Grid2, Typography, Button } from '@mui/material';
 import Link from 'next/link'; // Import Link dari Next.js
 import Image from 'next/image'; // Impor komponen Image dari Next.js
 import BPJS from '../public/BPJS.png';
@@ -8,7 +8,7 @@ import PJPK from '../public/PJPK.png';
 import Footer from '../components/footer';
 import Header from '../components/Header';
 
-export default function Karyawan() {
+const Karyawan = () => {
   return (
     <>
       <Header />
@@ -26,8 +26,8 @@ export default function Karyawan() {
 
         <Grid2 container spacing={5} justifyContent="center">
           <Grid2 item>
-            {/* Link untuk navigasi ke halaman karyawan */}
-            <Link href="/poliklinik" passHref>
+            {/* Link untuk navigasi ke halaman polikaryawan */}
+            <Link href="/mobilejkn" passHref>
               <Button
                 variant="contained"
                 color="primary"
@@ -58,7 +58,7 @@ export default function Karyawan() {
 
           <Grid2 item>
             {/* Link untuk navigasi ke halaman umum */}
-            <Link href="/poliklinik" passHref>
+            <Link href="/karyawan/polikaryawan" passHref>
               <Button
                 variant="contained"
                 color="primary"
@@ -101,7 +101,7 @@ export default function Karyawan() {
 
           <Grid2 item>
             {/* Link untuk navigasi ke halaman karyawan */}
-            <Link href="/poliklinik" passHref>
+            <Link href="/karyawan/polikaryawan" passHref>
               <Button
                 variant="contained"
                 color="primary"
@@ -156,7 +156,7 @@ export default function Karyawan() {
               borderColor: 'red', // Border berwarna merah
               color: 'red', // Tulisan berwarna merah
               borderRadius: '10px', // Sudut border
-              marginTop: 15, // Jarak antara gambar dan tombol
+              marginTop: 7, // Jarak antara gambar dan tombol
               '&:hover': {
                 borderColor: 'darkred', // Warna border saat hover
                 color: 'darkred', // Warna tulisan saat hover
@@ -175,3 +175,4 @@ export default function Karyawan() {
     </>
   );
 }
+export default Karyawan;
